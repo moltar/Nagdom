@@ -1,0 +1,25 @@
+nagdom.pl - Report Nagios status to Pingdom
+
+DESCRIPTION
+
+Do you have Nagios monitoring your servers? But who is monitoring your Nagios
+server?
+
+This script provides a status report readable by Pingdom regarding your
+Nagios install.
+
+INSTALLATION
+
+You will need to install POE::Component::Client::NRPE Perl module via CPAN:
+
+$> cpan POE::Component::Client::NRPE
+
+Check to make sure the script is working properly from the command line:
+
+$> chmod 755 nadgom.pl
+$> NAGIOS_HOST=localhost ./nagdom.pl
+
+Configure your web server to display the nagios.pl results. A sample config
+is included.
+
+Create a Pindom account, and setup monitoring.
